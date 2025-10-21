@@ -12,3 +12,4 @@ D:\VS Projects\NexaSuite.Week1\NexaSuiteApp\obj\Debug\net9.0\refint\NexaSuiteApp
 D:\VS Projects\NexaSuite.Week1\NexaSuiteApp\obj\Debug\net9.0\NexaSuiteApp.pdb
 D:\VS Projects\NexaSuite.Week1\NexaSuiteApp\obj\Debug\net9.0\NexaSuiteApp.genruntimeconfig.cache
 D:\VS Projects\NexaSuite.Week1\NexaSuiteApp\obj\Debug\net9.0\ref\NexaSuiteApp.dll
+D:\VS Projects\NexaSuite.Week1\NexaSuiteApp\obj\Debug\net9.0\NexaSuiteApp.sourcelink.json

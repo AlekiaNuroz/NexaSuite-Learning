@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NexaSuiteApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb09ca0084e886b0bf61de497b263fb36dd8e65e")]
 [assembly: System.Reflection.AssemblyProductAttribute("NexaSuiteApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NexaSuiteApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
