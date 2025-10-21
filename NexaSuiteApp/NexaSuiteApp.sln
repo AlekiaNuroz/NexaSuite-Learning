@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaSuiteApp", "NexaSuiteApp.csproj", "{D93850D0-BBC0-BFDD-8272-16A684B296AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D93850D0-BBC0-BFDD-8272-16A684B296AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93850D0-BBC0-BFDD-8272-16A684B296AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93850D0-BBC0-BFDD-8272-16A684B296AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93850D0-BBC0-BFDD-8272-16A684B296AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E04BC233-751D-4C17-B887-B480E9805174}
+	EndGlobalSection
+EndGlobal
