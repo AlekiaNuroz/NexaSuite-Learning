@@ -1,26 +1,34 @@
 ﻿using MediatR;
 using NexaSuite.Application.Users.DTOs;
+using NexaSuite.Application.Contracts.Repositories;
 using NexaSuite.Domain.Users;
 
 namespace NexaSuite.Application.Users.Commands;
 
 public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserDto>
 {
-    public Task<UserDto> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    private readonly IUserRepository _repository;
+
+    public CreateUserHandler(IUserRepository repository)
     {
-        // Domain entity creation
+        _repository = repository;
+    }
+
+    public async Task<UserDto> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    {
+        // Create the domain entity
         var user = new User(request.Name, request.Email);
 
-        // Normally we'd persist via repository (coming in Step 4)
-        // For now, just map to DTO
-        var dto = new UserDto
+        // Persist the new user
+        await _repository.AddAsync(user, cancellationToken);
+
+        // Map to DTO
+        return new UserDto
         {
             Id = user.Id,
             Name = user.Name,
             Email = user.Email,
             Roles = user.Roles.ToList()
         };
-
-        return Task.FromResult(dto);
     }
 }

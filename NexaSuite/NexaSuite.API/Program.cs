@@ -1,10 +1,16 @@
+using NexaSuite.Application;
+using NexaSuite.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
+
+builder.Services.AddApplication(); // <— MediatR & Application layer
+builder.Services.AddInfrastructure(builder.Configuration);
+
+// builder.Services.AddInfrastructure(builder.Configuration); // will add in Step 3
 
 var app = builder.Build();
 
