@@ -1,32 +1,22 @@
-﻿namespace NexaSuite.Week3
+﻿namespace NexaSuite.Week3;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.Clear();
-            Console.WriteLine("=== NexaSuite Guest Registry v2 ===\n");
+        Console.Clear();
+        Console.WriteLine("=== NexaSuite User Composition Demo ===\n");
 
-            Console.Write("Enter guest name: ");
-            string name = Console.ReadLine()!;
+        var user = new User("Alice Johnson", "alice@nexasuite.com");
+        user.AddRole("Employee");
+        user.AddRole("Guest");
 
-            Console.Write("Enter number of nights: ");
-            int nights = int.TryParse(Console.ReadLine(), out nights) ? nights : 0;
+        user.SetEmployeeProfile(new EmployeeProfile("Front Desk", 4200m, 0.15m));
+        user.SetGuestProfile(new GuestProfile(5, user.ApplyDiscount(600m)));
 
-            Console.Write("Enter room number: ");
-            int roomNumber = int.TryParse(Console.ReadLine(), out roomNumber) ? roomNumber : 101;
+        user.DisplayInfo();
 
-            var room = new Room(roomNumber, 120.50m);
-            var guest = new Guest(name, nights, room.RatePerNight);
-            var reservation = new Reservation(guest, room);
-
-            Console.Clear();
-            room.DisplayInfo();
-            guest.DisplayInfo();
-            reservation.DisplaySummary();
-
-            Console.WriteLine("\nPress any key to exit...");
-            Console.ReadKey();
-        }
+        Console.WriteLine("\nPress any key to exit...");
+        Console.ReadKey();
     }
 }

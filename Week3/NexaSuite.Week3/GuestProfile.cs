@@ -1,6 +1,7 @@
-﻿namespace NexaSuite.Week3
+﻿namespace NexaSuite.Week3;
+
+internal class GuestProfile(int nights, decimal bill)
 {
-    public class GuestProfile
-    {
-    }
+    public int Nights { get; private set; } = nights;
+    public decimal Bill { get; private set; } = bill;
 }
