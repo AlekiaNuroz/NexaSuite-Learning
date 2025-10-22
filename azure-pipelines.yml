@@ -1,0 +1,23 @@
+trigger:
+  branches:
+    include:
+      - main  # or your working branch
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - name: github_token
+    value: $(GitHubMirrorToken)
+
+steps:
+- checkout: self
+
+- script: |
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    git remote add github https://$(github_token)@github.com/yourusername/your-repo.git
+    git push --mirror github
+  displayName: 'Mirror Azure DevOps repo to GitHub'
+  env:
+    github_token: $(github_token)
